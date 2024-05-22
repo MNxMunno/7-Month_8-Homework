@@ -6,7 +6,7 @@ import { useFetch } from "../../hooks/useFetch";
 const Home = () => {
   return (
     <div className="container">
-      <h1>Home</h1>
+      {/* <h1>Home</h1> */}
       <Product />
     </div>
   );
