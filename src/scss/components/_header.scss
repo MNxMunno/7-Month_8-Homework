@@ -195,6 +195,9 @@
         .search {
           border: 2px solid #ccc;
           background: #cdd5df;
+          .navbar__search-content {
+            width: 89%;
+          }
           //   gap: 2px;
           input {
             background: #fff;
