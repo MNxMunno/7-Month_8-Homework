@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { GrCatalog } from "react-icons/gr";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-import { MdBorderAll, MdLogin } from "react-icons/md";
+import { MdBorderAll, MdLogin, MdOutlineHome } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { TfiFaceSmile } from "react-icons/tfi";
 
 const Header = () => {
   const [shrink, setShrink] = useState(false);
@@ -65,17 +66,26 @@ const Header = () => {
             )}
           </div>
           <div className="nav__items">
-            <Link to={"/order"}>
+            <Link className="home" to={"/"}>
+              <MdOutlineHome />
+              <p className="nav__btn">Главная</p>
+            </Link>
+            <Link className="order" to={"/order"}>
               <MdBorderAll />
               <p className="nav__btn">Заказы</p>
+            </Link>
+            <Link to={"/catalog"} className="catalog">
+              <GrCatalog />
+              <p className="nav__btn">Категории</p>
             </Link>
             <Link to={"/cart"}>
               <HiOutlineShoppingCart />
               <p className="nav__btn">Корзина</p>
             </Link>
             <Link to={"/login"}>
-              <MdLogin />
-              <p className="nav__btn">Войти</p>
+              <MdLogin className="login" />
+              <TfiFaceSmile className="smile" />
+              <p className="nav__btn">Профиль</p>
             </Link>
           </div>
         </nav>
