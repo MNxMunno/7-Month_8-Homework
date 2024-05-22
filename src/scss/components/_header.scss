@@ -195,10 +195,14 @@
         .search {
           border: 2px solid #ccc;
           background: #cdd5df;
-          gap: 5px;
+          //   gap: 2px;
           input {
             background: #fff;
             border-radius: 8px;
+          }
+          button {
+            border-radius: 8px;
+            margin: 0;
           }
         }
       }
