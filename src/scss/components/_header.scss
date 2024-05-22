@@ -1,0 +1,207 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &.shrink {
+    nav {
+      height: 50px;
+      box-shadow: 3px 3px 5px rgba(117, 117, 117, 0.2);
+      background: #fff;
+      .logo {
+        width: 300px;
+        svg {
+          fill: #fe2722;
+        }
+      }
+      .search {
+        background: #ececec;
+        input {
+          background: #ececec;
+        }
+        .navbar__search-content {
+          top: 45px;
+        }
+      }
+      .nav__btn {
+        display: none;
+      }
+      .btn {
+        background: #ececec;
+        svg {
+          color: #909090;
+        }
+      }
+      .nav__items {
+        a {
+          background: #ececec;
+          color: #909090 !important;
+        }
+      }
+    }
+  }
+  nav {
+    background: #fe2722;
+    transition: 0.2s ease-in-out;
+    height: 60px;
+    z-index: 100;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    .search {
+      height: 40px;
+      width: 100%;
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      input {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        text-indent: 12px;
+        border: 0;
+        outline: none;
+      }
+      button {
+        border: 1px solid #b2ed50;
+        background: #cf6;
+        border-radius: 100px;
+        max-width: 104px;
+        padding: 5px;
+        font-family: sans-serif;
+        margin: 4px 5px 4px 0;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          background: #bef550;
+        }
+      }
+      .navbar__search-content {
+        // max-width: 860px;
+        width: 57.5%;
+        height: 250px;
+        background: #fff;
+        position: absolute;
+        top: 50px;
+        z-index: 11;
+        padding: 0 20px;
+        margin-top: 5px;
+        overflow: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 5px #0002;
+        .search_box {
+          overflow-x: auto;
+          background: #fff;
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 6px 0;
+          text-decoration: none;
+          span {
+            color: #000;
+            font-size: 16px;
+            font-family: sans-serif;
+          }
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 300px;
+      svg {
+        fill: #fff;
+      }
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff !important;
+      background: #e81711;
+      padding: 5px;
+      border-radius: 8px;
+      transition: 0.2s;
+      &:hover {
+        background: #51060551;
+      }
+    }
+    .nav__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      a {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 5px;
+        background: #e81711;
+        border-radius: 8px;
+        color: #fff !important;
+        transition: 0.2s;
+        &:hover {
+          background: #51060551;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 858px) {
+    nav {
+      .nav__btn {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 777px) {
+    &.shrink {
+      nav {
+        height: 60px;
+        box-shadow: none;
+        .search {
+          background: #cdd5df;
+          input {
+            background: #fff;
+          }
+        }
+      }
+    }
+    & {
+      background: #fff;
+      box-shadow: 3px 3px 5px rgba(117, 117, 117, 0.2);
+      nav {
+        background: #fff;
+
+        .logo {
+          display: none;
+        }
+        .btn {
+          display: none;
+        }
+        .nav__items {
+          display: none;
+        }
+        .search {
+          border: 2px solid #ccc;
+          background: #cdd5df;
+          gap: 5px;
+          input {
+            background: #fff;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

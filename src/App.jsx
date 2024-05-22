@@ -10,12 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <>
-      <h1>App</h1>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<SingleRoute />} />
-        <Route path="*" element={<h1>404</h1>} />
+        <Route path="*" element={<h1 className="container">404</h1>} />
       </Routes>
       <ToastContainer />
     </>
