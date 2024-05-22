@@ -14,68 +14,10 @@ a {
   text-decoration: none;
 }
 
-.cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-  .card {
-    max-width: 216px;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.2s linear;
-    img {
-      //   max-width: 270px;
-      height: 200px;
-      width: 100%;
-      object-fit: contain;
-      width: calc(100%);
-      transition: all 0.3s ease;
-    }
-    .content {
-      padding: 10px;
-      h2 {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-        overflow: hidden;
-        font-family: sans-serif;
-        color: black;
-      }
-      p {
-        padding-top: 10px;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-        overflow: hidden;
-        font-family: sans-serif;
-        color: black;
-      }
-      b {
-        display: block;
-        padding-top: 10px;
-
-        font-family: sans-serif;
-        color: black;
-      }
-    }
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-
-      box-shadow: 1px 1px 10px rgba(132, 132, 132, 0.5);
-    }
-  }
-  @media only screen and (max-width: 493px) {
-    & {
-      // align-items: center;
-      // justify-content: center;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-}
+@import "./components/header";
+@import "./components/products";
+@import "./routers/home";
+@import "./routers/singleRoute";
+@import "./routers/wishlist";
+@import "./static/banner";
+@import "./static/cart";

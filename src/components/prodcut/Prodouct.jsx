@@ -5,7 +5,7 @@ import { useFetch } from "../../hooks/useFetch";
 const Prodouct = () => {
   let url = "/products";
   const { data, loading } = useFetch(url);
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <Cart data={data} loading={loading} />
