@@ -7,48 +7,59 @@ const Shop = () => {
   const { cart, removeFromCart, decrementCart, addToCart } = useCartStore();
 
   return (
-    <div className="karzenka container">
-      {cart.length === 0 ? (
-        <p style={{ marginTop: "10%", textAlign: "center", fontSize: "60px" }}>
-          404
-        </p>
-      ) : (
-        <div className="cart-items">
-          {cart?.map((item) => (
-            <div key={item.id} className="cart-item">
-              <div className="cart-item-details">
-                <img
-                  src={item.images[0]}
-                  alt={item.title}
-                  className="cart-item-image"
-                />
-              </div>
-
-              <div className="cart-item-details">
-                <h2>{item.title}</h2>
-                <p>{item.price} UZS</p>
-                <div className="cart-item-quantity">
-                  <button
-                    onClick={() => decrementCart(item)}
-                    disabled={item.quantity === 1}
-                  >
-                    -
-                  </button>
-                  <span>{item.quantity}</span>
-                  <button onClick={() => addToCart(item)}>+</button>
+    <section className="shop">
+      <div className=" container">
+        {cart.length === 0 ? (
+          <p
+            style={{ marginTop: "10%", textAlign: "center", fontSize: "60px" }}
+          >
+            404
+          </p>
+        ) : (
+          <div className="content">
+            {cart?.map((el) => (
+              <div key={el.id} className="cards">
+                <div className="card">
+                  <img
+                    src={el.images[0]}
+                    alt={el.title}
+                    className="cart-item-image"
+                  />
                 </div>
-                <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="remove-item"
-                >
-                  Удалить
-                </button>
+
+                <div className="card cont">
+                  <h1>{el.title}</h1>
+                  <p>{(el.price * 12730 * el.quantity).brm()} UZS</p>
+                  <div className="counter">
+                    <button
+                      className="dec"
+                      onClick={() => decrementCart(el)}
+                      disabled={el.quantity === 1}
+                    >
+                      -
+                    </button>
+                    <span>{el.quantity}</span>
+                    <button
+                      className="inc"
+                      disabled={el.quantity === 10}
+                      onClick={() => addToCart(el)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => removeFromCart(el.id)}
+                    className="delete"
+                  >
+                    Удалить
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 

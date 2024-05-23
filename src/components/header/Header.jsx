@@ -5,6 +5,7 @@ import { MdBorderAll, MdLogin, MdOutlineHome } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { TfiFaceSmile } from "react-icons/tfi";
+import { FaHeart } from "react-icons/fa";
 
 const Header = () => {
   const [shrink, setShrink] = useState(false);
@@ -74,8 +75,8 @@ const Header = () => {
               <MdBorderAll />
               <p className="nav__btn">Заказы</p>
             </Link>
-            <Link to={"/catalog"} className="catalog">
-              <GrCatalog />
+            <Link to={"/wishlist"} className="catalog">
+              <FaHeart />
               <p className="nav__btn">Категории</p>
             </Link>
             <Link to={"/shop"}>

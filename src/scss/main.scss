@@ -10,18 +10,19 @@
   padding: 0 20px;
 }
 
-body {
-  background: #ddd;
-}
-
 a {
   text-decoration: none;
+}
+button {
+  border: 0;
+  cursor: pointer;
 }
 
 @import "./components/header";
 @import "./components/products";
 @import "./routers/home";
 @import "./routers/singleRoute";
+@import "./routers/shop";
 @import "./routers/wishlist";
 @import "./static/banner";
 @import "./static/cart";

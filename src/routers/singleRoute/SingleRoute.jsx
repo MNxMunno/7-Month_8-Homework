@@ -32,12 +32,12 @@ const SingleRoute = () => {
           <div className="cardd">
             <h2>{product?.title}</h2>
             <p>{product?.description}</p>
-            <b>{product?.price} $</b>
+            <b>{(product?.price * 12730).brm()} UZS</b>
             <div className="btns">
-              <button onClick={() => add(product)}>
-                Add to Cart <MdOutlineAddShoppingCart />
+              <button className="addCart" onClick={() => add(product)}>
+                Add to Cart
               </button>
-              <button onClick={() => heart(product)}>
+              <button className="like" onClick={() => heart(product)}>
                 <FaRegHeart />
               </button>
             </div>

@@ -1,5 +1,5 @@
 .single {
-  padding-top: 80px;
+  padding: 40px 0 100px;
   .content {
     display: flex;
     align-items: center;
@@ -27,6 +27,36 @@
       max-width: 500px;
       img {
         width: 100%;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 20px;
+        .addCart {
+          background-color: #bef550;
+          border: 0;
+          padding: 10px 15px;
+          font-family: sans-serif;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 12px;
+          transition: 0.2s;
+          &:hover {
+            background: #8fba3a;
+          }
+        }
+        .like {
+          background-color: #fd2b2b;
+          border: 0;
+          padding: 5px 10px;
+          font-family: sans-serif;
+          border-radius: 8px;
+
+          font-size: 20px;
+          cursor: pointer;
+          color: #fff;
+        }
       }
     }
   }

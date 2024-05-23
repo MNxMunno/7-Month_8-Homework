@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { create } from "zustand";
 
 const useCartStore = create((set) => ({
@@ -14,6 +15,7 @@ const useCartStore = create((set) => ({
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
+        // toast.success("zur");
       }
       localStorage.setItem("cart", JSON.stringify(newCart));
       return { cart: newCart };

@@ -1,0 +1,78 @@
+.shop {
+  .content {
+    padding: 70px 0 100px;
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+
+      flex-wrap: wrap;
+
+      .card {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+        img {
+          width: 100px;
+          height: 100px;
+          width: 100%;
+        }
+        h1 {
+          font-family: sans-serif;
+        }
+        p {
+          font-family: sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          padding: 20px 0;
+        }
+        .counter {
+          padding-bottom: 20px;
+          display: flex;
+          align-items: center;
+          button {
+            padding: 10px 15px;
+            border-radius: 12px;
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 16px;
+          }
+          span {
+            display: block;
+            width: 50px;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 600;
+          }
+          .dec {
+            background: #ef3131;
+            &:disabled {
+              opacity: 0.7;
+            }
+          }
+          .inc {
+            background: #5dda22;
+            &:disabled {
+              opacity: 0.7;
+            }
+          }
+        }
+        .delete {
+          background: #ef3131;
+          padding: 5px 10px;
+          color: #fff;
+          font-family: sans-serif;
+          font-size: 16px;
+          border-radius: 12px;
+          transition: 0.2s;
+          &:hover {
+            background: #c71d1d;
+          }
+        }
+      }
+    }
+  }
+}
