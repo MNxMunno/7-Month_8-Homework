@@ -10,11 +10,7 @@ const Shop = () => {
     <section className="shop">
       <div className=" container">
         {cart.length === 0 ? (
-          <p
-            style={{ marginTop: "10%", textAlign: "center", fontSize: "60px" }}
-          >
-            404
-          </p>
+          <h1 style={{ marginTop: "10%", textAlign: "center" }}>404</h1>
         ) : (
           <div className="content">
             {cart?.map((el) => (

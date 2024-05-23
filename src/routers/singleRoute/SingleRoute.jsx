@@ -1,8 +1,7 @@
 import axios from "../../api";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 import useStore from "../../context/wishlist";
 import useCartStore from "../../context/cartSlice";
 

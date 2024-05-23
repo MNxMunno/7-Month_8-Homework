@@ -1,9 +1,4 @@
 import React from "react";
-// import useStore from "../../components/context/store";
-import { IoMdHeart } from "react-icons/io";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaStar } from "react-icons/fa6";
-// import "./Wishlist.css";
 import useStore from "../../context/wishlist";
 import { Link } from "react-router-dom";
 
@@ -27,7 +22,7 @@ const Wishlist = () => {
     <section className="wishlist">
       <div className="container">
         {bears.length === 0 ? (
-          <h1>404</h1>
+          <h1 style={{ textAlign: "center" }}>404</h1>
         ) : (
           <div className="content">{card}</div>
         )}

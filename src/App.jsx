@@ -19,7 +19,17 @@ const App = () => {
         <Route path="/product/:id" element={<SingleRoute />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="*" element={<h1 className="container">404</h1>} />
+        <Route
+          path="*"
+          element={
+            <h1
+              style={{ textAlign: "center", paddingTop: "40px" }}
+              className="container"
+            >
+              404
+            </h1>
+          }
+        />
       </Routes>
       <ToastContainer />
     </>

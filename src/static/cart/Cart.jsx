@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 // import useCartStore from "../../context/cartSlice";
 
 const Cart = ({ data, loading }) => {
-  // console.log(add);
   const cart = data?.map((el) => (
     <Link to={`/product/${el.id}`} className="card" key={el.id}>
       <img src={el.images[0]} alt={el.title} />

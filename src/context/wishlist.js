@@ -10,7 +10,6 @@ const useStore = create((set) => ({
       let updatedBears;
       if (index !== -1) {
         updatedBears = state.bears.filter((i) => i.id !== item.id);
-        toast.error("Ajjoyib!");
       } else {
         updatedBears = [...state.bears, item];
         toast.success("okey");

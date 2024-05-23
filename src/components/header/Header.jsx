@@ -49,8 +49,8 @@ const Header = () => {
             </Link>
           </div>
           <Link to={"/wishlist"} className="btn">
-            <GrCatalog />
-            <p className="nav__btn">Каталог</p>
+            <FaHeart />
+            <p className="nav__btn">Wishlist</p>
           </Link>
           <div className="search">
             <input
