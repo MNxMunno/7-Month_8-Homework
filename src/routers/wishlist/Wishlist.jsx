@@ -3,9 +3,9 @@ import useStore from "../../context/wishlist";
 import { Link } from "react-router-dom";
 
 const Wishlist = () => {
-  const { bears } = useStore();
+  const { bear } = useStore();
   const heart = useStore((s) => s.toggleWishlistItem);
-  const card = bears.map((el) => (
+  const card = bear.map((el) => (
     <div className="cards" key={el.id}>
       <Link to={"/shop"} className="card">
         <img src={el.images[0]} alt={el.title} />
@@ -21,7 +21,7 @@ const Wishlist = () => {
   return (
     <section className="wishlist">
       <div className="container">
-        {bears.length === 0 ? (
+        {bear.length === 0 ? (
           <h1 style={{ textAlign: "center" }}>404</h1>
         ) : (
           <div className="content">{card}</div>

@@ -4,16 +4,16 @@ import useCartStore from "../../context/cartSlice";
 // import useCartStore from "../../components/context/bears";
 
 const Shop = () => {
-  const { cart, removeFromCart, decrementCart, addToCart } = useCartStore();
+  const { carts, removeFromCart, decrementCart, addToCart } = useCartStore();
 
   return (
     <section className="shop">
       <div className=" container">
-        {cart.length === 0 ? (
+        {carts.length === 0 ? (
           <h1 style={{ marginTop: "10%", textAlign: "center" }}>404</h1>
         ) : (
           <div className="content">
-            {cart?.map((el) => (
+            {carts?.map((el) => (
               <div key={el.id} className="cards">
                 <div className="card">
                   <img

@@ -2,22 +2,22 @@ import { toast } from "react-toastify";
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-  bears: JSON.parse(localStorage.getItem("wishlist")) || [],
+  bear: JSON.parse(localStorage.getItem("wishlist")) || [],
   toggleWishlistItem: (item) => {
     set((state) => {
-      const index = state.bears.findIndex((i) => i.id === item.id);
+      const index = state.bear.findIndex((i) => i.id === item.id);
 
       let updatedBears;
       if (index !== -1) {
-        updatedBears = state.bears.filter((i) => i.id !== item.id);
+        updatedBears = state.bear.filter((i) => i.id !== item.id);
       } else {
-        updatedBears = [...state.bears, item];
+        updatedBears = [...state.bear, item];
         toast.success("okey");
       }
 
       localStorage.setItem("wishlist", JSON.stringify(updatedBears));
 
-      return { bears: updatedBears };
+      return { bear: updatedBears };
     });
   },
 }));
