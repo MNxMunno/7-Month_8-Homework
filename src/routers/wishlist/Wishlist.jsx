@@ -18,7 +18,7 @@ const Wishlist = () => {
       <div className="card cart">
         <h2 title={el.title}>{el.title}</h2>
         <p>{(el.price * 12730).brm()} UZS</p>
-        <button onClick={() => heart(el)}>heart</button>
+        <button onClick={() => heart(el)}>Remove</button>
       </div>
     </div>
   ));
@@ -27,7 +27,7 @@ const Wishlist = () => {
     <section className="wishlist">
       <div className="container">
         {bears.length === 0 ? (
-          <p>404</p>
+          <h1>404</h1>
         ) : (
           <div className="content">{card}</div>
         )}
