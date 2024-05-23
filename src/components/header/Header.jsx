@@ -9,7 +9,7 @@ import { TfiFaceSmile } from "react-icons/tfi";
 const Header = () => {
   const [shrink, setShrink] = useState(false);
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 30) {
       setShrink(true);
     } else {
       setShrink(false);
@@ -47,7 +47,7 @@ const Header = () => {
               </svg>
             </Link>
           </div>
-          <Link to={"/catalog"} className="btn">
+          <Link to={"/wishlist"} className="btn">
             <GrCatalog />
             <p className="nav__btn">Каталог</p>
           </Link>
@@ -78,7 +78,7 @@ const Header = () => {
               <GrCatalog />
               <p className="nav__btn">Категории</p>
             </Link>
-            <Link to={"/cart"}>
+            <Link to={"/shop"}>
               <HiOutlineShoppingCart />
               <p className="nav__btn">Корзина</p>
             </Link>

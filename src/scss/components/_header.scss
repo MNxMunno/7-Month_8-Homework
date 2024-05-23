@@ -4,12 +4,16 @@
   left: 0;
   width: 100%;
   z-index: 100;
-
+  padding-top: 20px;
   &.shrink {
+    background: #fff;
+    padding-bottom: 40px;
+    box-shadow: 3px 3px 5px rgba(117, 117, 117, 0.2);
     nav {
       height: 50px;
-      box-shadow: 3px 3px 5px rgba(117, 117, 117, 0.2);
+      border: 1px solid #909090;
       background: #fff;
+
       .logo {
         width: 300px;
         svg {
@@ -52,6 +56,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    border-radius: 8px;
     .search {
       height: 40px;
       width: 100%;
@@ -213,7 +218,9 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 10px;
+          padding: 5px 10px;
+          border-radius: 12px 12px 0 0;
+          box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.2);
           .catalog {
             display: block;
             text-align: center;
@@ -239,6 +246,7 @@
           a {
             background: none;
             color: #909090 !important;
+            font-size: 24px;
           }
         }
         .search {
